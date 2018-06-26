@@ -1,8 +1,6 @@
-package ictgradschool.industry.lab10.ex02;
+package ictgradschool.industry.lab_recursion.ex02;
 
 import java.util.Map;
-import java.util.TreeMap;
-import java.util.HashMap;
 
 /**
  * Main program for Lab 10 Ex 2, which should print out a table showing the frequency of all alphanumeric characters

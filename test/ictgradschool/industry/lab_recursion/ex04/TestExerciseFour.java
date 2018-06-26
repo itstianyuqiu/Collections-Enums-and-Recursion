@@ -1,4 +1,4 @@
-package ictgradschool.industry.lab10.ex04;
+package ictgradschool.industry.lab_recursion.ex04;
 
 import org.junit.After;
 import org.junit.Before;

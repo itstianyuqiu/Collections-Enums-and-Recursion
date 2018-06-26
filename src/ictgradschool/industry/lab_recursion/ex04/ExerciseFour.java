@@ -1,4 +1,4 @@
-package ictgradschool.industry.lab10.ex04;
+package ictgradschool.industry.lab_recursion.ex04;
 
 /**
  * Created by anhyd on 27/03/2017.

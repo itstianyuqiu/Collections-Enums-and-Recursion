@@ -1,4 +1,4 @@
-package ictgradschool.industry.lab10.ex01;
+package ictgradschool.industry.lab_recursion.ex01;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

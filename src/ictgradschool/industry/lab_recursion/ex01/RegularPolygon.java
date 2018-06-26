@@ -1,4 +1,4 @@
-package ictgradschool.industry.lab10.ex01;
+package ictgradschool.industry.lab_recursion.ex01;
 
 /**
  * Represents a regular polygon - an n-sided polygon with all sides of an equal length, and all interior
