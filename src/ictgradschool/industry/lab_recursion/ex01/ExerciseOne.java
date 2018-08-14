@@ -11,9 +11,9 @@ public class ExerciseOne {
 
     /**
      * This method should take the given array of Shapes, and add each one to a TreeSet.
-     *
+     * <p>
      * Since we're adding to a TreeSet, there should be no duplicates.
-     *
+     * <p>
      * When we print out the shapes, we should see that they are ordered by perimeter, in ascending order.
      *
      * @param shapes the shapes to sort using a TreeSet.
@@ -32,7 +32,7 @@ public class ExerciseOne {
         // Print out the result. Do not edit below this line.
         NumberFormat formatter = new DecimalFormat("#.##");
         System.out.println("Number of shapes in set: " + shapeSet.size());
-        for(Shape s : shapeSet) {
+        for (Shape s : shapeSet) {
 
             System.out.println(" - " + s + " has a perimeter of: " + formatter.format(s.getPerimeter()) + "cm");
 
@@ -41,7 +41,7 @@ public class ExerciseOne {
 
     /**
      * This method should take the given array of Shapes, and add each one to an ArrayList.
-     *
+     * <p>
      * We should then sort the ArrayList using the Collections.sort method, supplying a Comparator which sorts by
      * the number of sides (ascending) then by area (descending).
      *
@@ -61,18 +61,43 @@ public class ExerciseOne {
         Comparator<Shape> shapeComparator = new Comparator<Shape>() {
             @Override
             public int compare(Shape o1, Shape o2) {
-
-                return 0;
+                if (o1.getNumSides() > o2.getNumSides()) {
+                    return 1;
+                } else if (o1.getNumSides() == o2.getNumSides()) {
+                    if (o1.getArea() < o2.getArea()) {
+                        return 1;
+                    } else if (o1.getArea() == o2.getArea()) {
+                        return 0;
+                    } else {
+                        return -1;
+                    }
+                } else {
+                    return -1;
+                }
+//                int result;
+//                int sideDiff = o1.getNumSides() - o2.getNumSides();
+//                int areaDiff = (int) (o1.getArea() - o2.getArea());
+//                if (sideDiff != 0) {
+//                    result = (sideDiff > 0) ? 1 : -1;
+//                } else {
+//                    if (areaDiff != 0) {
+//                        result = (areaDiff > 0) ? 1 : -1;
+//                    } else {
+//                        result = 0;
+//                    }
+//
+//                }
+//                return result;
             }
         };
 
         // TODO Sort shapeList using the Collections.sort method and shapeComparator
-
+        Collections.sort(shapeList, shapeComparator);
 
         // Print out the result. Do not edit below this line.
         NumberFormat formatter = new DecimalFormat("#.##");
         System.out.println("Number of shapes in list: " + shapeList.size());
-        for(Shape s : shapeList) {
+        for (Shape s : shapeList) {
 
             System.out.println(" - " + s + " has " + s.getNumSides() + " sides and an area of: " + formatter.format(s.getArea()) + "cm^2");
 
