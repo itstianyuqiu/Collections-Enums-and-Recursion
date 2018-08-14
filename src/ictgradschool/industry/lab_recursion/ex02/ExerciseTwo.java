@@ -1,5 +1,6 @@
 package ictgradschool.industry.lab_recursion.ex02;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -21,18 +22,19 @@ public class ExerciseTwo {
         text = text.toUpperCase();
 
         // TODO Initialize the frequencies map to an appropriate concrete instance
-        Map<Character, Integer> frequencies = null;
+        Map<Character, Integer> frequencies = new HashMap<>();
 
         // Loop through all characters in the given string
         for (char c : text.toCharArray()) {
 
             // If c is alphanumeric...
-            if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')) {
+//            if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')) {
 
                 // TODO If the map already contains c as a key, increment its value by 1.
                 // TODO Otherwise, add it as a new key with the initial value of 1.
 
-            }
+
+//            }
 
         }
 
